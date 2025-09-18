@@ -1,0 +1,18 @@
+.container {
+    display: flex;
+  }
+  body
+  {
+    text-align: center;
+  }
+ul.custom-marker li::marker{
+    content:"🌟 ";
+    color:gold;
+    font-size: 1.2em;    
+    text-align: center;     
+}
+p{
+   
+    overflow-wrap:break-word;
+    hyphens:auto;
+}
