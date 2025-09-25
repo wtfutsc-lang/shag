@@ -1,6 +1,6 @@
 h1
 {
-    color: rgb(255, 0, 0);
+    
     background-color: rgb(4, 0, 255);
     text-align: center;
     border-radius: 10000px;
@@ -8,25 +8,83 @@ h1
     padding: 55px;
      
 }
+.gradient-text {
+    font-size: 60px;
+    font-weight: bold;
+    text-align: center;
+    background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
+/*   background: linear-gradient(to right, #ff0000, #0000ff);  */
+/* Горизонтальный градиент */
+
+/*   background: linear-gradient(to bottom, #ff0000, #ffff00); */
+/* Вертикальный градиент */
+
+/* background: linear-gradient(45deg, #ff00ff, #00ffff); */
+/* Диагональный градиент */
+    -webkit-background-clip: text;   /* для Chrome, Safari */
+    -webkit-text-fill-color: transparent;
+    background-clip: text;           /* для Firefox */
+    color: transparent;              /* подстраховка */
+  }
+.magic-gradient-text {
+font-size: 15px;
+font-weight: bold;
+font-family: Arial, sans-serif;
+display: inline-block;
+
+/* текст сам прозрачный */
+color: transparent;
+-webkit-text-fill-color: transparent; /* для Chrome/Safari */
+
+/* градиент */
+background: linear-gradient(
+  90deg,
+  #a977c8 0%,      /* фиолетовый */
+  #6f8cc7 8.5%,    /* голубой */
+  #639a47 16.5%,   /* зелёный */
+  #1d1d1f 33%,     /* тёмный */
+  #1d1d1f 66%,     /* тёмный повторно */
+  #a977c8 83.5%,   /* снова фиолетовый */
+  #6f8cc7 91.5%,   /* снова голубой */
+  #639a47 100%     /* зелёный финал */
+);
+
+/* важные настройки */
+background-clip: text;
+-webkit-background-clip: text;
+
+/* градиент «растянут», чтобы можно было двигать */
+background-size: 600% 100%;
+background-position-x: 0%;
+}
+#I
+{
+    text-align: center;
+}
 p
 {
     text-align: center;
-    background-color: rgb(0, 255, 255);
+    /*background-color: rgb(0, 255, 255);
     border-radius: 1000px;
-    line-height:5;
+    line-height:5;*/
     overflow-wrap:break-word;
     hyphens:auto;
+    color:rgb(0, 0, 0);
+    font-weight: bold;
+    font-size: 20px;
 }
 img
 { 
    
     border-radius: 30px;
-  
+    background: white;
 }
 body
 {
  cursor: wait;
- background-color: rgb(0, 0, 0);
+/* background-color: rgb(0, 0, 0);*/
+ background: #050000;
+background: linear-gradient(133deg, rgba(5, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 0%, rgba(66, 0, 0, 1) 50%, rgba(0, 0, 0, 1) 100%, rgba(0, 0, 0, 1) 100%);
 }
 #q
 {
@@ -43,16 +101,15 @@ body
 .aligncenter
 {
      text-align: center;
-     background-color: black;
+    /* background-color: rgb(0, 0, 0);*/
 }
 .container {
     display: flex;
   }
 #bl
 {
-    background-color: black;
     color: teal;
-    line-height:8;
+  /*  line-height:8;*/
     letter-spacing: 1px;
 }
 ul.custom-marker li::marker{
@@ -63,11 +120,20 @@ ul.custom-marker li::marker{
 .menu a
 {
      display: inline-block;
-     background: red;
-     color:rgb(0, 217, 255);
+     background: #15ff00;
+     background: linear-gradient(201deg, rgba(21, 255, 0, 1) 0%, rgba(217, 0, 255, 1) 50%, rgba(38, 0, 255, 1) 100%);;
+     color:rgb(255, 255, 255);
      padding:10px 20px;
      border-radius: 600px;
      text-decoration: none;
      margin-right: 10px;
      font-weight: bold;
 }
+.menu 
+{
+    text-align: center;
+}
+.menu a:hover {
+    background: #ff7d7d;
+    color: #000000;
+  }
