@@ -1,0 +1,140 @@
+.menu
+{
+    display: flex;
+    justify-content: center ;
+    gap: 12px;
+    background: lightblue;
+    padding: 10px;
+    border-radius:10px ;
+    text-align: center;
+}
+
+ .menu_item
+ {
+    padding: 8px 12px;
+    background: #fff;
+    border-radius: 8px;
+    text-decoration: none;
+    color: #0f172a;
+    font-weight: 600;
+ }
+ .menu_item:hover
+ {
+     background: #e2e8f0;
+ }
+ .cards{
+     display: flex;
+     flex-wrap: wrap;
+     gap: 16px;
+     padding: 16px;
+     background: #fafafa;
+     border-radius:10px ;
+ }
+ .card
+ {
+     flex:1 1 220px;
+     background: #e0f2fe;
+     border: 2px solid #38bdf8;
+     border-radius: 12px;
+     padding: 16px;
+     text-align: center;
+     font-weight: 600;
+ }
+ .card-big{
+     flex-grow: 2;
+     background: #bbf7d0;
+     border-color: #22c55e;
+ }
+.center-screen
+{
+    border-radius:10px ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #f8fafc;
+}
+.btn
+{
+    padding: 12px 18px;
+    border-radius: 10px;
+    border: 0;
+    background: #2563eb;
+    color: #fff;
+    font: 600 16px/1 system-ui, Arial;
+    cursor: pointer;
+}
+.btn:hover{
+    background: #1d4ed8;
+}
+.container{
+    display: grid;
+    grid-template-columns: 100px 200px;
+    grid-template-rows: 100px 100px;
+    gap: 10px;
+}
+.item{
+background: lightblue;
+display: flex;
+align-items: center;
+justify-content: center;
+font-weight: bold;
+border-radius: 10px;
+}
+.container2{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 20px;
+}
+.item2{
+background: lightblue;
+display: flex;
+align-items: center;
+justify-content: center;
+font-weight: bold;
+border-radius: 10px;
+}
+.template
+{
+    display: grid;
+    grid-template-areas:
+    "header header"
+    "sidebar main"
+    "footer footer";
+    grid-template-columns: 200px 1fr;
+    grid-template-rows: 60px 1fr 50px;
+    gap :10px;
+    border-radius: 10px;
+    justify-self: center;
+}
+.template div{
+    text-align: center;
+}
+.header{
+    grid-area: header;
+    background: lightblue;
+}
+.sidebar{
+    grid-area: sidebar;
+    background: lightgreen;
+}
+.main{
+    grid-area: main;
+    background: lightcoral;
+}
+.footer{
+    grid-area: footer;
+    background: lightgray;
+    
+}
+.board{
+    display: grid;
+    grid-template-columns: repeat(8,50px);
+    grid-template-rows: repeat(8,50px);
+}
+.square{
+    width: 50px;
+    height: 50px;
+}
+.square:nth-child(even){background: black;}
+.square:nth-child(odd){background: white;}
