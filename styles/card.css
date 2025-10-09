@@ -127,14 +127,69 @@ border-radius: 10px;
     background: lightgray;
     
 }
-.board{
-    display: grid;
-    grid-template-columns: repeat(8,50px);
-    grid-template-rows: repeat(8,50px);
+.chessboard {
+    background: #bbc993;
+    padding: 50px;
 }
-.square{
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(8, 50px); 
+    grid-template-rows: repeat(8, 50px);
+    gap: 5px;
+    padding: 20px;
+    justify-self: center;
+    border: 2px solid #d9af3d;
+    border-radius: 10px;
+    background: #f2ca5c;
+}
+
+.square{ 
     width: 50px;
     height: 50px;
+    border-radius: 10px;
+ } 
+
+.square:nth-child(odd)  { background: #fff; }
+.square:nth-child(even) { background: #000; }
+
+.square:nth-child(n+9):nth-child(-n+16),
+.square:nth-child(n+25):nth-child(-n+32),
+.square:nth-child(n+41):nth-child(-n+48),
+.square:nth-child(n+57):nth-child(-n+64) {
+  filter: invert(1);
 }
-.square:nth-child(even){background: black;}
-.square:nth-child(odd){background: white;}
+.photo{
+    width:80%;
+    margin:0 auto;
+    text-align: center;
+}
+.photo_image{
+    max-width:100%;
+    height: auto;
+}
+.gallery{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap:15px;
+}
+.gallery_item{
+    background: lightblue;
+    padding: 20px;
+}
+@media(max-width:1024){
+    .gallery{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (max-width:600px){
+    .gallery{
+        grid-template-columns:1fr;
+    }
+}
+@media (max-width:600px){
+    .menu{
+        flex-direction:column;
+        gap: 10px;
+    }
+}
