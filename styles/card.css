@@ -63,6 +63,7 @@
     color: #fff;
     font: 600 16px/1 system-ui, Arial;
     cursor: pointer;
+    transition: background-color 0.5s;
 }
 .btn:hover{
     background: #1d4ed8;
@@ -177,6 +178,29 @@ border-radius: 10px;
     background: lightblue;
     padding: 20px;
 }
+.color_item{
+     width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: black;
+}
+@keyframes color{
+    0%{background-color: black;}
+    100%{background-color: white;}
+}
+
+}
+.color_item{
+   
+    animation:color 0.007s  infinite;
+ }
+@keyframes spin{
+    0%{transform:rotate(0deg);}
+    100%{transform:rotate(360deg);}
+}
+.btn{
+    animation: spin 2s linear infinite;
+}
 @media(max-width:1024){
     .gallery{
         grid-template-columns: repeat(2, 1fr);
@@ -192,4 +216,88 @@ border-radius: 10px;
         flex-direction:column;
         gap: 10px;
     }
+}
+@keyframes jump{
+    0% {transform:translateY(0);}
+    50% {transform:translateY(-50px);}
+    100% {transform:translateY(0);}
+}
+.ball{
+  
+  width: 50px;
+  height: 50px;
+  background: black;
+  border-radius: 50%;
+  animation: jump 1s ease-in-out infinite;
+}
+@keyframes blink{
+    0%{opacity: 1;}
+    50%{opacity: 0;}
+    100%{opacity: 1;}
+
+}
+.square {
+    animation: blink 1s infinite;
+}
+.animation-button{
+    padding: 12px 18px;
+    border-radius: 12px;
+    border: 0;
+    color: #fff;
+    background: #6366f1;
+    cursor: pointer;
+    transition: transform .6s cubic-bezier(.68,-.55,.27,1.55), all .3s ease;
+
+}
+.animation-button:hover {
+    transform:scale(2);
+     background: blue;
+}
+.a-underline{
+    position: relative;
+    text-decoration: none;
+    color:#111;
+}
+.a-underline::after{
+    content:"";
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    height: 2px;
+    width: 100%;
+    background: #111;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s;
+}
+.a-underline:hover::after{
+    transform: scaleX(1);
+}
+.fade-in{
+    opacity: 0;
+    transform: translateY(12px);
+    animation: appear 1s ease forwards;
+}
+@keyframes appear{
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.grad{
+    min-height: 160px;
+    display: grid;
+    place-items: center;
+    color: #fff;
+    font-weight: 700;
+    background: linear-gradient(45deg,#8b5cf6,#06b6d4,#22c55e);
+    background-size: 300% 300%;
+    animation: shift 8s ease infinite;
+    border-radius: 16px;
+}
+
+@keyframes shift{
+    0%{background-position: 0% 50%;}
+    50%{ background-position: 100% 50%;}
+    100%{ background-position: 0% 50%;}
 }
