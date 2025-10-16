@@ -168,7 +168,38 @@
             <div>
                 <a>a</a>
             </div>
+            
+            <form action="/search" method="GET">
+                <label for="q">Поиск:</label>
+                <input id="q" name="q" type="text" placeholder="что ищем?"/>
+                <button type="submit">найти</button>
+            </form>
 
+            <form>
+                <label for="city">Город</label>
+                <select id="city" name="city">
+                    <option value="msk">Москва</option>
+                    <option value="spb">Санкт-Петербург</option>
+                    <option value="mnsk">Минск</option>
+                </select>
+            </form>
+            <form class="auth" action="/signup" method="post">
+                <h3 class="auth_title">registr</h3>
+
+                <label class="auth_lable">name
+                   <input class="auth_input" name="name" type="text" placeholder="your name" required>
+                </label> 
+
+                <label class="auth_lable">email
+                    <input class="auth_input" name="email" type="email" placeholder="you@mail.com" required>
+                 </label> 
+
+                 <label class="auth_lable">password
+                    <input class="auth_input" name="password" type="password" placeholder="******" required>
+                 </label> 
+
+                 <button class="auth_btn" type="submit">create</button>
+            </form>
         </main>
     </body>
 </html>
