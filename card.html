@@ -9,9 +9,8 @@
         <header>
              <nav class="menu">
                 <a class="menu_item" href="index.html">   glavnoe    </a>
-                <a class="menu_item" href="#">   q </a>
-                <a class="menu_item" href="#">   w   </a>
-                <a class="menu_item" href="#">  e   </a>
+                <a class="menu_item" href="text.html">   vtorostepennoe </a>
+                <a class="menu_item" href="bootstrap.html"> bootstrap </a>
             </nav>
         </header>
         <main>
@@ -197,8 +196,25 @@
                  <label class="auth_lable">password
                     <input class="auth_input" name="password" type="password" placeholder="******" required>
                  </label> 
-
+                 
+                 <label class="from_optoin">
+                     <input class="from_checkbox" type="checkbox" id="agree" name="agree" value="yes">
+                     <span class="from_optoin-text">I agree</span>
+                 </label>
                  <button class="auth_btn" type="submit">create</button>
+
+                 <button type="reset">
+                     delete
+                 </button>
+                 
+            </form>
+
+            <form class="form" action="/upload" method="POST" enctype="multipart/form-data">
+            <label class="form_option">
+                <span class="form_option-text">Avatar</span>
+                <input class="form_file" type="file" name="avatar" accept="image/*">
+            </label>
+            <button class="form_button form_button--primary" type="submit">download</button>
             </form>
         </main>
     </body>
